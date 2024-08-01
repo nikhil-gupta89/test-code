@@ -1,0 +1,27 @@
+.car-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .car-block > div {
+    flex: 1;
+  }
+  
+  .car-content {
+    padding: 20px;
+    background-color: #fff; /* Adjust the background color as needed */
+  }
+  
+  .car-content h1,
+  .car-content p {
+    margin: 10px 0;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
