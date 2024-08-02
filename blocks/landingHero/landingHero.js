@@ -1,51 +1,50 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+import { createOptimizedPicture } from '../../scripts/aem.js'; 
+import { moveInstrumentation } from '../../scripts/scripts.js'; 
 
-export default function decorate(block) {
-  const container = document.createElement('div');
-  container.className = 'car-feature';
+export default function decorate(block) { 
+    const ul = document.createElement('ul'); 
+    const li = document.createElement('li'); 
+    ul.appendChild(li);
 
-  const imageContainer = document.createElement('div');
-  imageContainer.className = 'car-image';
-  const img = document.createElement('img');
-  img.src = '[IMAGE URL]'; // Replace [IMAGE URL] with actual path
-  img.alt = 'Nissan Qashqai on the road';
-  const optimizedImage = createOptimizedPicture(img.src, img.alt);
-  imageContainer.appendChild(optimizedImage);
+    // Image handling
+    const img = new Image();
+    img.src = 'path_to_your_image.jpg'; // Link to the car image
+    img.alt = 'Qashqai';
+    const optimizedPic = createOptimizedPicture(img.src, img.alt, true, [{ width: '1024' }]);
+    moveInstrumentation(img, optimizedPic.querySelector('img'));
+    const imgWrapper = document.createElement('div');
+    imgWrapper.appendChild(optimizedPic);
+    imgWrapper.className = 'cards-card-image';
 
-  const textContainer = document.createElement('div');
-  textContainer.className = 'car-text';
+    // Title
+    const title = document.createElement('h1');
+    title.textContent = 'Qashqai';
+    title.className = 'cards-card-title';
 
-  const heading = document.createElement('h1');
-  heading.textContent = 'Qashqai';
-  textContainer.appendChild(heading);
+    // Pricing and details
+    const price = document.createElement('div');
+    price.textContent = '£24,398 Starting price';
+    const horsepower = document.createElement('div');
+    horsepower.textContent = '160 Horsepower';
 
-  const price = document.createElement('p');
-  price.textContent = '£24,398';
-  price.className = 'car-price';
-  textContainer.appendChild(price);
+    // Additional info
+    const additionalInfo = document.createElement('div');
+    additionalInfo.textContent = 'With its striking style, unmatched versatility...';
 
-  const description = document.createElement('p');
-  description.textContent = 'With its striking style, unmatched versatility, and dependable performance, it\'s not just an SUV - it\'s a dynamic adventure waiting to happen';
-  textContainer.appendChild(description);
+    // Characteristics
+    const characteristics = document.createElement('div');
+    characteristics.innerHTML = '<strong>440-800 Miles per gallon</strong> | <strong>35</strong> | <strong>5-7 Seats</strong>';
+    characteristics.className = 'cards-card-attributes';
 
-  const features = document.createElement('ul');
-  features.className = 'car-features';
-  const featuresData = ['160 Horsepower', '35 Miles per gallon', '5-7 Seats'];
-  featuresData.forEach(feature => {
-    let li = document.createElement('li');
-    li.textContent = feature;
-    features.appendChild(li);
-  });
-  textContainer.appendChild(features);
+    // Button
+    const button = document.createElement('button');
+    button.textContent = 'BOOK A TEST DRIVE';
+    button.type = 'button';
+    button.className = 'cards-card-button';
 
-  const button = document.createElement('button');
-  button.textContent = 'BOOK A TEST DRIVE';
-  button.className = 'cta-button';
-  textContainer.appendChild(button);
+    // Append all to li
+    li.append(imgWrapper, title, price, horsepower, additionalInfo, characteristics, button);
 
-  container.appendChild(imageContainer);
-  container.appendChild(textContainer);
-
-  block.textContent = ''; // Clear the content block before appending
-  block.appendChild(container);
+    block.textContent = ''; // Clear initial content
+    block.append(ul); // Append list to the block
 }
