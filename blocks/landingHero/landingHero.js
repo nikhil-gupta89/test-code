@@ -1,52 +1,51 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  const ul = document.createElement('ul');
-  const li = document.createElement('li');
-  
-  const pictureWrap = document.createElement('div');
-  pictureWrap.className = 'cards-card-image';
-  const imgSrc = 'path_to_your_image.jpg'; // Replace this path with the actual image source path
-  const optimizedPic = createOptimizedPicture(imgSrc, 'Dynamic image of Nissan Qashqai', true, [{ width: '750' }]);
-  pictureWrap.append(optimizedPic);
+  const container = document.createElement('div');
+  container.className = 'car-feature';
 
-  const bodyWrap = document.createElement('div');
-  bodyWrap.className = 'cards-card-body';
-  
-  const modelName = document.createElement('h2');
-  modelName.textContent = 'Qashqai';
-  
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'car-image';
+  const img = document.createElement('img');
+  img.src = '[IMAGE URL]'; // Replace [IMAGE URL] with actual path
+  img.alt = 'Nissan Qashqai on the road';
+  const optimizedImage = createOptimizedPicture(img.src, img.alt);
+  imageContainer.appendChild(optimizedImage);
+
+  const textContainer = document.createElement('div');
+  textContainer.className = 'car-text';
+
+  const heading = document.createElement('h1');
+  heading.textContent = 'Qashqai';
+  textContainer.appendChild(heading);
+
+  const price = document.createElement('p');
+  price.textContent = '£24,398';
+  price.className = 'car-price';
+  textContainer.appendChild(price);
+
   const description = document.createElement('p');
   description.textContent = 'With its striking style, unmatched versatility, and dependable performance, it\'s not just an SUV - it\'s a dynamic adventure waiting to happen';
-  
-  const price = document.createElement('p');
-  price.textContent = '£24,398 Starting price';
-  
-  const horsepower = document.createElement('p');
-  horsepower.textContent = '160 Horsepower';
-  
-  const mileage = document.createElement('p');
-  mileage.textContent = '35 Miles per gallon';
-  
-  const seats = document.createElement('p');
-  seats.textContent = '5-7 Seats';
-  
+  textContainer.appendChild(description);
+
+  const features = document.createElement('ul');
+  features.className = 'car-features';
+  const featuresData = ['160 Horsepower', '35 Miles per gallon', '5-7 Seats'];
+  featuresData.forEach(feature => {
+    let li = document.createElement('li');
+    li.textContent = feature;
+    features.appendChild(li);
+  });
+  textContainer.appendChild(features);
+
   const button = document.createElement('button');
   button.textContent = 'BOOK A TEST DRIVE';
-  button.className = 'test-drive-button';
-  
-  bodyWrap.appendChild(modelName);
-  bodyWrap.appendChild(description);
-  bodyWrap.appendChild(price);
-  bodyWrap.appendChild(horsepower);
-  bodyWrap.appendChild(mileage);
-  bodyWrap.appendChild(seats);
-  bodyWrap.appendChild(button);
+  button.className = 'cta-button';
+  textContainer.appendChild(button);
 
-  li.appendChild(pictureWrap);
-  li.appendChild(bodyWrap);
-  ul.appendChild(li);
+  container.appendChild(imageContainer);
+  container.appendChild(textContainer);
 
-  block.textContent = ''; // Clear existing content
-  block.append(ul);
+  block.textContent = ''; // Clear the content block before appending
+  block.appendChild(container);
 }
