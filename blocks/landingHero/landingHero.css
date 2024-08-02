@@ -1,27 +1,52 @@
-.car-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .car-block > div {
-    flex: 1;
-  }
-  
-  .car-content {
-    padding: 20px;
-    background-color: #fff; /* Adjust the background color as needed */
-  }
-  
-  .car-content h1,
-  .car-content p {
-    margin: 10px 0;
-  }
-  
-  .cta-button {
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+.car-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.car-image {
+  flex: 1;
+  line-height: 0; /* Removes space below images */
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.car-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.car-price {
+  color: #ff5722; /* A bold color for price */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.car-features {
+  list-style: none;
+  padding: 0;
+}
+
+.car-features li {
+  padding: 5px 0;
+}
+
+.cta-button {
+  background-color: #007bff; /* Example blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
