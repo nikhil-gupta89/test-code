@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  alert ("in test code repo");
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
