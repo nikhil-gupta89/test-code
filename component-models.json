@@ -229,7 +229,7 @@
         "component": "select",
         "name": "dropdownTitle3",
         "valueType": "string",
-        "optionsProvider": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1",
+        "options": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1",
         "label": "dropdownTitle3"
       }
     ]
