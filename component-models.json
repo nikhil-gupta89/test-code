@@ -202,14 +202,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "altText",
+        "name": "test1",
         "value": "Default alt",
         "label": "Alt Text"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "altTextting",
+        "name": "test2",
         "value": "Default alt",
         "label": "Alt Text"
       }
