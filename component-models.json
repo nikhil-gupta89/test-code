@@ -226,7 +226,7 @@
         "label": "Rows1"
       },
       {
-        "component": "select",
+        "component": "dropdown",
         "name": "dropdownTitle3",
         "value": "h5",
         "valueType": "string",
