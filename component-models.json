@@ -224,6 +224,12 @@
         "name": "rows1",
         "value": "",
         "label": "Rows1"
+      },
+      {
+        "component": "dropdown",
+        "name": "dropdownTitle3",
+        "optionsProvider": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1",
+        "label": "dropdownTitle3"
       }
     ]
   }
