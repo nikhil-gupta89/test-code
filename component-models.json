@@ -197,7 +197,7 @@
     ]
   },
   {
-    "id": "dorpdown",
+    "id": "dropdown",
     "fields": [
       {
       "component": "text",
