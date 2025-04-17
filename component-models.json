@@ -228,10 +228,36 @@
       {
         "component": "dropdown",
         "name": "dropdownTitle3",
-        "value": "opntion1",
+        "value": "h5",
         "valueType": "string",
         "optionsProvider": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1",
-        "label": "dropdownTitle3"
+        "label": "dropdownTitle3",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
       }
     ]
   }
