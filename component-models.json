@@ -211,14 +211,18 @@
         "label": "Select Option 1",
         "options": {
           "url": "https://run.mocky.io/v3/c14407e6-eb58-42d9-9387-35490229838e"
-        }
+        },
+        "required": true,
+        "placeholder": "Choose option1"
       },
       {
         "type": "dropdown",
         "label": "Select Option 2",
         "options": {
           "url": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1"
-        }
+        },
+        "required": true,
+        "placeholder": "Choose option2"
       },
       {
         "component": "text",
