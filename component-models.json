@@ -203,15 +203,15 @@
         "component": "text",
         "valueType": "string",
         "name": "test1",
-        "value": "Default alt",
-        "label": "Alt Text"
+        "value": "",
+        "label": "test1"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "test2",
-        "value": "Default alt",
-        "label": "Alt Text"
+        "value": "",
+        "label": "test2"
       }
     ]
   }
