@@ -200,18 +200,18 @@
     "id": "dorpdown",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "test1",
-        "value": "",
-        "label": "test1"
+      "component": "text",
+      "valueType": "number",
+      "name": "columns1",
+      "value": "",
+      "label": "Columns1"
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "test2",
+        "valueType": "number",
+        "name": "rows1",
         "value": "",
-        "label": "test2"
+        "label": "Rows1"
       }
     ]
   }
