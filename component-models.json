@@ -195,5 +195,22 @@
         "label": "Reference"
       }
     ]
+  },
+  {
+    "id": "dorpdown",
+    "fields": [
+      {
+        "type": "dropdown",
+        "name": "dropdown 1",
+        "label": "dropdown 1",
+        "optionsProvider": "https://run.mocky.io/v3/c14407e6-eb58-42d9-9387-35490229838e"
+      },
+      {
+        "type": "dropdown",
+        "name": "dropdown 2",
+        "label": "dropdown 2",
+        "optionsProvider": "https://run.mocky.io/v3/d0fb757b-8029-4b7a-80f0-cfb058877ab1"
+      }
+    ]
   }
 ]

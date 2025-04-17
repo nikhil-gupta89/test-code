@@ -36,5 +36,9 @@
     "components": [
       "card"
     ]
+  },
+  {
+    "id": "dropdown",
+    "components": []
   }
 ]
